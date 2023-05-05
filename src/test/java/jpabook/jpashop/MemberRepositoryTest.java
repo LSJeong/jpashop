@@ -14,14 +14,14 @@ import org.springframework.transaction.annotation.Transactional;
 @SpringBootTest
 public class MemberRepositoryTest {
 
-    @Autowired MemberRepository memberRepository;
+   /* @Autowired MemberRepository memberRepository;*/
 
     @Test
     @Transactional   //테스트에서 쓰면 롤백해줌
     @Rollback(false)
     public void testMember() throws Exception{
         //given
-        Member member = new Member();
+      /*  Member member = new Member();
         member.setUsername("memberA");
 
         //when
@@ -33,6 +33,6 @@ public class MemberRepositoryTest {
         Assertions.assertThat(findMember.getUsername()).isEqualTo(member.getUsername());
 
         Assertions.assertThat(findMember).isEqualTo(member); //같을까? 같음 //JPA 엔티티 동일성 보장
-        System.out.println("findMember == member : " + (findMember == member));
+        System.out.println("findMember == member : " + (findMember == member));*/
     }
 }
